@@ -2,20 +2,27 @@
 
 I made the robots make a bunch of tools so I don't have to pay sucker AI companies. More to come as I need them. I'm sharing them with you. Please be kind.
 
+A lot of these are silly command stuff I could probably bind in a shell alias or something but I like using python
+
 ## 📁 Project Structure
 
 ```sh
 AV_tools/
 ├── audio/
-│   └── opus2m4a/          # Audio conversion and manipulation tools
+│   └── sample_wrangler/          # Audio conversion and manipulation tools
 │       ├── convert_to_m4a.py
 │       ├── extract_vocals.py
 │       ├── remove_drums.py
 │       └── batch_*.py     # Batch processing variants
 │
-└── image/
-    └── transperency/      # Image transparency processing
-        └── transparency.py
+├── image/
+│   └── transperency/      # Image transparency processing
+│       └── transparency.py
+│
+└── streaming/
+    └── get_latest_live/   # YouTube live stream checker
+        ├── get_latest_live.py
+        └── get_latest_live.sh
 ```
 
 ## 🎵 Audio Tools
@@ -44,15 +51,30 @@ Located in `image/transperency/`, these tools provide:
 
 📖 [Full Image Tools Documentation](image/transperency/README.md)
 
+## 🎬 Streaming Tools
+
+Located in `streaming/get_latest_live/`, these tools provide:
+
+- **YouTube Live Stream Checker**: Check any YouTube channel for upcoming scheduled live streams
+- **Multiple Output Formats**: Get results in formatted text or JSON
+- **Flexible Configuration**: Use environment variables or config files for API keys
+- **Automated Setup**: Shell script handles virtual environment and dependencies
+
+**Key Dependencies**: google-api-python-client, python-dotenv, pyyaml
+
+📖 [Full Streaming Tools Documentation](streaming/get_latest_live/README.md)
+
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- **Python 3.6+**
+- **Python 3.6+** (Python 3.7+ for streaming tools)
 - **ffmpeg** (for audio tools)
   - macOS: `brew install ffmpeg`
   - Linux: `sudo apt-get install ffmpeg`
   - Windows: Download from [ffmpeg.org](https://ffmpeg.org/download.html)
+- **YouTube Data API v3 Key** (for streaming tools)
+  - Get one from [Google Cloud Console](https://console.cloud.google.com/apis/credentials)
 
 ### Installation
 
@@ -97,6 +119,15 @@ cd image/transperency
 python transparency.py add image.jpg --opacity 80 --output transparent.png
 ```
 
+### YouTube Live Stream Check
+
+```bash
+cd streaming/get_latest_live
+./get_latest_live.sh  # Automated setup and execution
+# or
+python get_latest_live.py --format json
+```
+
 ## 🛠️ Development
 
 Each tool is self-contained with its own:
@@ -118,3 +149,4 @@ This is a personal toolset, but suggestions and improvements are welcome.
 - Audio processing tools require significant disk space for AI models (~200-300MB)
 - First-time use of demucs will download pretrained models
 - Some operations are CPU/GPU intensive and may take time for large files
+- Streaming tools require a YouTube Data API v3 key (free, but subject to daily quota limits)
