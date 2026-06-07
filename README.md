@@ -1,6 +1,6 @@
 # AV Tools
 
-A collection of Python-based audio and visual processing utilities for common multimedia manipulation tasks.
+I made the robots make a bunch of tools so I don't have to pay sucker AI companies. More to come as I need them. I'm sharing them with you. Please be kind. 
 
 ## 📁 Project Structure
 
@@ -101,7 +101,7 @@ Each tool is self-contained with its own:
 
 ## 📄 License
 
-This is a personal collection of utility scripts. Use at your own discretion.
+Use at your own discretion.
 
 ## 🤝 Contributing
 
