@@ -1,0 +1,22 @@
+# YouTube Latest Live Stream Checker Configuration
+# Copy this file to config.yaml and fill in your details
+
+# YouTube Data API v3 Key
+# Get one from: https://console.cloud.google.com/apis/credentials
+youtube_api_key: "YOUR_API_KEY_HERE"
+
+# Channel identification (provide ONE of the following):
+
+# Option 1: Channel ID (recommended)
+# Find it in your channel URL: youtube.com/channel/UCxxxxxxxxxxxxx
+channel_id: "UCxxxxxxxxxxxxx"
+
+# Option 2: Channel username or handle
+# For modern handles: use the format without @, e.g., "channelname"
+# For classic usernames: use the exact username from your custom URL
+# channel_username: "your_channel_name"
+
+# Notes:
+# - Only one of channel_id or channel_username needs to be set
+# - channel_id is more reliable and faster
+# - Environment variables in .env will override these settings

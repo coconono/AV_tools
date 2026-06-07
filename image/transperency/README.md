@@ -14,13 +14,15 @@ A powerful Python tool for processing image transparency, including adding, remo
 
 ## Installation
 
-1. Create and activate a virtual environment:
+1: Create and activate a virtual environment:
+
 ```bash
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-2. Install dependencies:
+2: Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -30,21 +32,25 @@ pip install -r requirements.txt
 ### Basic Operations
 
 **Add transparency with opacity:**
+
 ```bash
 python transparency.py add input.jpg --opacity 80 --output output.png
 ```
 
 **Remove transparency with custom background:**
+
 ```bash
 python transparency.py remove input.png --background "#FF0000" --output output.jpg
 ```
 
 **Make white pixels transparent:**
+
 ```bash
 python transparency.py color-to-alpha input.png --color white --tolerance 10
 ```
 
 **Extract alpha channel:**
+
 ```bash
 python transparency.py extract-alpha input.png --output alpha.png
 ```
@@ -52,18 +58,20 @@ python transparency.py extract-alpha input.png --output alpha.png
 ### Batch Processing
 
 **Process entire directory:**
+
 ```bash
 python transparency.py add ./images/ --opacity 75 --output-dir ./processed/
 ```
 
 **Recursive directory processing:**
+
 ```bash
 python transparency.py color-to-alpha ./images/ --color white --recursive --output-dir ./output/
 ```
 
 ## Command-Line Options
 
-```
+```sh
 positional arguments:
   {add,remove,color-to-alpha,extract-alpha}
                         Operation to perform
@@ -97,17 +105,20 @@ optional arguments:
 
 ## Examples
 
-### Remove white background from logo:
+### Remove white background from logo
+
 ```bash
 python transparency.py color-to-alpha logo.jpg --color white --tolerance 15 --output logo_transparent.png
 ```
 
-### Batch process with 50% opacity:
+### Batch process with 50% opacity
+
 ```bash
 python transparency.py add ./screenshots/ --opacity 50 --recursive --output-dir ./watermarked/
 ```
 
-### Flatten transparent PNGs to JPEGs:
+### Flatten transparent PNGs to JPEGs
+
 ```bash
 python transparency.py remove ./images/ --background white --output-dir ./flattened/
 ```

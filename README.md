@@ -1,10 +1,10 @@
 # AV Tools
 
-I made the robots make a bunch of tools so I don't have to pay sucker AI companies. More to come as I need them. I'm sharing them with you. Please be kind. 
+I made the robots make a bunch of tools so I don't have to pay sucker AI companies. More to come as I need them. I'm sharing them with you. Please be kind.
 
 ## 📁 Project Structure
 
-```
+```sh
 AV_tools/
 ├── audio/
 │   └── opus2m4a/          # Audio conversion and manipulation tools
@@ -59,6 +59,7 @@ Located in `image/transperency/`, these tools provide:
 1. Clone or download this repository
 
 2. Navigate to the specific tool directory:
+
    ```bash
    cd audio/opus2m4a/    # For audio tools
    # or
@@ -66,6 +67,7 @@ Located in `image/transperency/`, these tools provide:
    ```
 
 3. Install Python dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
@@ -75,18 +77,21 @@ Located in `image/transperency/`, these tools provide:
 ## 📝 Usage Examples
 
 ### Audio Conversion
+
 ```bash
 cd audio/opus2m4a
 python convert_to_m4a.py input.opus output.m4a
 ```
 
 ### Vocal Extraction
+
 ```bash
 cd audio/opus2m4a
 python extract_vocals.py song.mp3 --output vocals.m4a
 ```
 
 ### Image Transparency
+
 ```bash
 cd image/transperency
 python transparency.py add image.jpg --opacity 80 --output transparent.png
@@ -95,6 +100,7 @@ python transparency.py add image.jpg --opacity 80 --output transparent.png
 ## 🛠️ Development
 
 Each tool is self-contained with its own:
+
 - `README.md` - Detailed usage instructions
 - `requirements.txt` - Python dependencies
 - Batch processing variants (where applicable)
