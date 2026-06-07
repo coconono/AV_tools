@@ -1,0 +1,109 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Audio/Video Processing
+# Output files
+output/
+outputs/
+converted/
+processed/
+
+# Temporary audio files
+*.tmp
+*.temp
+temp_*.wav
+temp_*.mp3
+temp_*.m4a
+
+# Demucs AI models cache
+.demucs/
+separated/
+
+# Large media files (uncomment if you want to ignore input files)
+# *.mp3
+# *.wav
+# *.m4a
+# *.opus
+# *.flac
+# *.ogg
+
+# Large image files (uncomment if needed)
+# *.psd
+# *.ai
+
+# Test files
+test_output/
+test_files/
+samples/
+
+# Logs
+*.log
+logs/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Environment variables
+.env
+.env.local
+
+# Thumbnails
+thumbs.db
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json

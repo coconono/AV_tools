@@ -1,0 +1,7 @@
+# Audio Processing Tools - Python Dependencies
+
+# Demucs - AI-powered audio source separation for drum removal
+demucs>=4.0.0
+
+# TorchCodec - Required by torchaudio for audio encoding/decoding
+torchcodec
